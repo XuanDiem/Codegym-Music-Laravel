@@ -37,7 +37,8 @@ class SubRouteTest extends TestCase
     /** @test */
     public function user_route_api()
     {
-        $response = $this->get('/');
+        $this->withoutExceptionHandling();
+        $response = $this->get('/api/test-user');
 
         $response->assertStatus(200);
     }
@@ -45,7 +46,7 @@ class SubRouteTest extends TestCase
     /** @test */
     public function admin_route_api()
     {
-        $response = $this->get('/');
+        $response = $this->get('/api/test-admin');
 
         $response->assertStatus(200);
     }
