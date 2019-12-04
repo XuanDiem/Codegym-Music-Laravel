@@ -23,7 +23,9 @@ RUN apk add --no-cache libzip-dev && \
 RUN docker-php-ext-install pdo pdo_mysql
 
 CMD bash -c "composer update && \
+ npm install && npm run dev && \
  php artisan key:generate && \
  php artisan config:cache && \
  php artisan serve --host 0.0.0.0 --port 8000"
 
+# docker run -it -p 8000:8000 -v ${PWD}:/app codegym-music
