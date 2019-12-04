@@ -38,4 +38,26 @@ class AuthTest extends TestCase
             'email' => $email,
         ]);
     }
+
+    /** @test */
+    public function api_url_login_exist()
+    {
+        $response = $this->get('/api/login');
+
+        $response->assertStatus(200);
+    }
+
+    public function api_login_success()
+    {
+        $response = $this->json('post', '/api/login', [
+            'email' => 'admin@example.com',
+            'password' => 'password',
+        ]);
+
+        $response->assertStatus(200)
+            ->assertJson([
+                'data'=>true,
+                'message'=>'Login success'
+            ]);
+    }
 }

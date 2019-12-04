@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="9d0278d1-62c6-4f6c-8d5a-c03450f4bc73" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/admin/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/user/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/user/api.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/SubRouteTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/SubRouteTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/AuthTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/AuthTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
