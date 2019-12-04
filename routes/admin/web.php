@@ -14,3 +14,6 @@
 Route::get('/admin', function () {
     return view('welcome');
 });
+
+
+Route::get('/test-admin','SubRouteController@testAdmin');
