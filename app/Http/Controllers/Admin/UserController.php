@@ -22,4 +22,6 @@ class UserController extends Controller
             'message' => 'create success',
         ], 200);
     }
+
+
 }
