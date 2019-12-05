@@ -2,8 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d0278d1-62c6-4f6c-8d5a-c03450f4bc73" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/Project-First.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Project-First.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/admin/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin/api.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/Feature/AuthTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/AuthTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -14,7 +19,7 @@
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <execution>
-      <executable />
+      <executable path="composer" />
     </execution>
   </component>
   <component name="Git.Settings">
@@ -109,6 +114,11 @@
       <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/tymon/jwt-auth" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php56" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-util" />
+      <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/vendor/namshi/jose" />
     </include_path>
   </component>
   <component name="ProjectId" id="1UT7L5aFyDCTA0QyGsvteMOB3gs" />
@@ -121,7 +131,8 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/Http/Controllers/User" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -164,6 +175,9 @@
       <workItem from="1575368673304" duration="351000" />
       <workItem from="1575382499264" duration="669000" />
       <workItem from="1575422216848" duration="2800000" />
+      <workItem from="1575445842957" duration="5367000" />
+      <workItem from="1575456039043" duration="1684000" />
+      <workItem from="1575513046653" duration="10087000" />
     </task>
     <servers />
   </component>
@@ -184,6 +198,14 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
+    <state x="1856" y="312" width="523" height="168" key="ComposerInitDialogKey" timestamp="1575521358035">
+      <screen x="1440" y="0" width="1366" height="768" />
+    </state>
+    <state x="1856" y="312" width="523" height="168" key="ComposerInitDialogKey/1440.0.1366.768/0.27.1440.873@1440.0.1366.768" timestamp="1575521358035" />
+    <state x="1906" y="154" width="424" height="484" key="FileChooserDialogImpl" timestamp="1575458941888">
+      <screen x="1440" y="0" width="1366" height="768" />
+    </state>
+    <state x="1906" y="154" width="424" height="484" key="FileChooserDialogImpl/1440.0.1366.768/0.27.1440.873@1440.0.1366.768" timestamp="1575458941888" />
     <state x="478" y="322" width="399" height="149" key="NewPhpFileDialog" timestamp="1575424306548">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
@@ -192,9 +214,10 @@
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.27.1366.741@0.27.1366.741" timestamp="1575385081051" />
-    <state x="339" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1575422230456">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state x="1779" y="204" key="com.intellij.ide.util.TipDialog" timestamp="1575456037839">
+      <screen x="1440" y="0" width="1366" height="768" />
     </state>
     <state x="339" y="224" key="com.intellij.ide.util.TipDialog/0.27.1366.741@0.27.1366.741" timestamp="1575422230456" />
+    <state x="1779" y="204" key="com.intellij.ide.util.TipDialog/1440.0.1366.768/0.27.1440.873@1440.0.1366.768" timestamp="1575456037839" />
   </component>
 </project>
