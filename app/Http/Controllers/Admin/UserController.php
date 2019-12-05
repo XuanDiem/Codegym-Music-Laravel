@@ -14,7 +14,7 @@ class UserController extends Controller
 
     public function __construct()
     {
-//        $this->middleware('auth:api', ['except' => ['login']]);
+        $this->middleware('auth:api', ['except' => ['register', 'login']]);
     }
 
 
@@ -35,7 +35,8 @@ class UserController extends Controller
     {
         $credentials = request(['email', 'password']);
 
-        if (! $token = auth()->attempt($credentials)) {
+
+        if (!$token = auth('api')->attempt($credentials)) {
             return response()->json(['error' => 'Unauthorized'], 401);
         }
 
