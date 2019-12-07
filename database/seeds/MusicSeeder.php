@@ -20,5 +20,6 @@ class MusicSeeder extends Seeder
         $music->file_mp3 = '/assets/file-mp3/ThayToiYeuCoAyDinhLongRemix-ThanhHungIdolDJ-6054427.mp3';
         $music->avatar = '../../assets/images/thanh-hung.jpg';
         $music->save();
+
     }
 }
