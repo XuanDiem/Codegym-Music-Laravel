@@ -24,7 +24,15 @@ class UserRequest extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|min:2'
+            'name' => 'required|min:2',
+            'email' => 'required|unique:users'
+        ];
+    }
+
+    public function messages()
+    {
+        return [
+            'email.unique' => 'This email has already exist, please register another email'
         ];
     }
 }

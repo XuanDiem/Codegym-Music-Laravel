@@ -18,7 +18,6 @@ class UserController extends Controller
         $this->middleware('auth:api', ['except' => ['register', 'login']]);
     }
 
-
     public function register(UserRequest $request)
     {
         $user = User::create([
