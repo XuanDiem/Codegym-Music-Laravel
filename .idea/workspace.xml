@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9d0278d1-62c6-4f6c-8d5a-c03450f4bc73" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/httpRequests/http-requests-log.http" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/UserController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Providers/RouteServiceProvider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/auth.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/auth.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/admin/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/admin/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +130,8 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../LetEat" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTTP Request" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
@@ -142,11 +144,306 @@
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RestClientSettings">
+    <option name="REQUEST_HISTORY">
+      <list>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000/api/me" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="token" />
+                <option name="value" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNTc2NjY4OTgxLCJleHAiOjE1NzY2NzI1ODEsIm5iZiI6MTU3NjY2ODk4MSwianRpIjoiQXZBTGowTjVrdzNSZ0VpQiIsInN1YiI6NCwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.inOSPXbgFXfGJpLENcxbK-26H19oYt3-JIssTKZxDlw" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8000/api/login" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;email&quot;: &quot;admin01&quot;,&#10;  &quot;password&quot;: &quot;password&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8000/api/register" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;name&quot;: &quot;admin&quot;,&#10;  &quot;email&quot;: &quot;admin01&quot;,&#10;  &quot;password&quot;: &quot;password&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8000/api/login" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;email&quot;: &quot;admin&quot;,&#10;  &quot;password&quot;: &quot;password&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000/api/me" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="token" />
+                <option name="value" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNTc2NjY4MTcwLCJleHAiOjE1NzY2NzE3NzAsIm5iZiI6MTU3NjY2ODE3MCwianRpIjoieXFjVzUwSlhUSjVoSkN5SiIsInN1YiI6MiwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.q63_aBJYm3WJrs-2278vP2zRSHDFg2oY3HCuNvFXOG4" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000/api/me" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="token" />
+                <option name="value" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNTc2NjYzODU2LCJleHAiOjE1NzY2Njc0NTYsIm5iZiI6MTU3NjY2Mzg1NiwianRpIjoiNjNiZjFEeHg0ckpRRWhwMSIsInN1YiI6MiwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.RQThn2pLtWAUf0IfuDHM3g-KHKAwcbcXQSoO7c0XNmE" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8000/api/login" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;email&quot;: &quot;admin&quot;,&#10;  &quot;password&quot;: &quot;assword&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8000/api/login" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;email&quot;: &quot;admin1&quot;,&#10;  &quot;password&quot;: &quot;password&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="GET" />
+          <option name="urlBase" value="http://localhost:8000/api/me" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Accept" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="token" />
+                <option name="value" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNTc2NjYzNDUzLCJleHAiOjE1NzY2NjcwNTMsIm5iZiI6MTU3NjY2MzQ1MywianRpIjoibGZtSTV3WTNXMHhmb3JzdCIsInN1YiI6MiwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.7vOD37Oz_HUEhVy_90Ea0HiKoAgxdQAs85zGMBKGwRY" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8000/api/me" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parameters">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="token" />
+                <option name="value" value="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vbG9jYWxob3N0OjgwMDAvYXBpL2xvZ2luIiwiaWF0IjoxNTc2NjYzNDUzLCJleHAiOjE1NzY2NjcwNTMsIm5iZiI6MTU3NjY2MzQ1MywianRpIjoibGZtSTV3WTNXMHhmb3JzdCIsInN1YiI6MiwicHJ2IjoiODdlMGFmMWVmOWZkMTU4MTJmZGVjOTcxNTNhMTRlMGIwNDc1NDZhYSJ9.7vOD37Oz_HUEhVy_90Ea0HiKoAgxdQAs85zGMBKGwRY" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="parametersEnabled" value="true" />
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:80/api/login" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;email&quot;: &quot;admin&quot;,&#10;  &quot;password&quot;: &quot;password&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8000/api/register" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;  &quot;name&quot;: &quot;admin&quot;,&#10;  &quot;email&quot;: &quot;admin&quot;,&#10;  &quot;password&quot;: &quot;password&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8000/api/register" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Content-Type" />
+                <option name="value" value="application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;&quot;name&quot;: &quot;admin&quot;,&#10;&quot;email&quot;: &quot;admin&quot;,&#10;&quot;password&quot;: &quot;password&quot;&#10;}" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+        <RestClientRequest>
+          <option name="httpMethod" value="POST" />
+          <option name="urlBase" value="http://localhost:8000/api/register" />
+          <option name="urlPath" value="" />
+          <option name="headers">
+            <list>
+              <KeyValuePair>
+                <option name="key" value="Contentype" />
+                <option name="value" value="Application/json" />
+              </KeyValuePair>
+            </list>
+          </option>
+          <option name="haveTextToSend" value="true" />
+          <option name="textToSend" value="{&#10;&quot;name&quot;: &quot;admin&quot;&#10;&quot;email&quot;: &quot;admin&quot;&#10;&quot;password&quot;: &quot;password&quot;&#10;}&#10;&#10;##" />
+          <option name="filesToSend" value="" />
+        </RestClientRequest>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="HTTP Request.auth#2">
+    <configuration name="auth#1" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/auth.http" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="auth#2" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/auth.http" index="2" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="auth#3" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/auth.http" index="3" runType="Run single request">
+      <method v="2" />
+    </configuration>
+    <configuration name="auth#4" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/auth.http" index="4" runType="Run single request">
+      <method v="2" />
+    </configuration>
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner scope="XML" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.auth#2" />
+        <item itemvalue="HTTP Request.auth#3" />
+        <item itemvalue="HTTP Request.auth#4" />
+        <item itemvalue="HTTP Request.auth#1" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -189,6 +486,7 @@
       <workItem from="1575985879266" duration="58000" />
       <workItem from="1576069537720" duration="1717000" />
       <workItem from="1576081258332" duration="82000" />
+      <workItem from="1576662476632" duration="6054000" />
     </task>
     <servers />
   </component>
@@ -218,18 +516,39 @@
     </state>
     <state x="466" y="154" width="424" height="484" key="FileChooserDialogImpl/0.27.1366.741@0.27.1366.741" timestamp="1576081339672" />
     <state x="1906" y="154" width="424" height="484" key="FileChooserDialogImpl/1440.0.1366.768/0.27.1440.873@1440.0.1366.768" timestamp="1575946419716" />
+    <state width="1300" height="239" key="GridCell.Tab.0.bottom" timestamp="1576669133241">
+      <screen x="1440" y="0" width="1366" height="768" />
+    </state>
+    <state width="1300" height="239" key="GridCell.Tab.0.bottom/1440.0.1366.768/0.27.1440.873@1440.0.1366.768" timestamp="1576669133241" />
+    <state width="1300" height="239" key="GridCell.Tab.0.center" timestamp="1576669133240">
+      <screen x="1440" y="0" width="1366" height="768" />
+    </state>
+    <state width="1300" height="239" key="GridCell.Tab.0.center/1440.0.1366.768/0.27.1440.873@1440.0.1366.768" timestamp="1576669133240" />
+    <state width="1300" height="239" key="GridCell.Tab.0.left" timestamp="1576669133240">
+      <screen x="1440" y="0" width="1366" height="768" />
+    </state>
+    <state width="1300" height="239" key="GridCell.Tab.0.left/1440.0.1366.768/0.27.1440.873@1440.0.1366.768" timestamp="1576669133240" />
+    <state width="1300" height="239" key="GridCell.Tab.0.right" timestamp="1576669133241">
+      <screen x="1440" y="0" width="1366" height="768" />
+    </state>
+    <state width="1300" height="239" key="GridCell.Tab.0.right/1440.0.1366.768/0.27.1440.873@1440.0.1366.768" timestamp="1576669133241" />
     <state x="478" y="322" width="399" height="149" key="NewPhpFileDialog" timestamp="1575424306548">
       <screen x="0" y="27" width="1366" height="741" />
     </state>
     <state x="478" y="322" width="399" height="149" key="NewPhpFileDialog/0.27.1366.741@0.27.1366.741" timestamp="1575424306548" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1575385081051">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state width="498" height="463" key="SwitcherDM" timestamp="1576668162229">
+      <screen x="1440" y="0" width="1366" height="768" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.27.1366.741@0.27.1366.741" timestamp="1575385081051" />
-    <state x="339" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1576081313148">
-      <screen x="0" y="27" width="1366" height="741" />
+    <state width="498" height="463" key="SwitcherDM/1440.0.1366.768/0.27.1440.873@1440.0.1366.768" timestamp="1576668162229" />
+    <state x="1779" y="204" key="com.intellij.ide.util.TipDialog" timestamp="1576662476853">
+      <screen x="1440" y="0" width="1366" height="768" />
     </state>
     <state x="339" y="224" key="com.intellij.ide.util.TipDialog/0.27.1366.741@0.27.1366.741" timestamp="1576081313148" />
-    <state x="1779" y="204" key="com.intellij.ide.util.TipDialog/1440.0.1366.768/0.27.1440.873@1440.0.1366.768" timestamp="1575946288639" />
+    <state x="1779" y="204" key="com.intellij.ide.util.TipDialog/1440.0.1366.768/0.27.1440.873@1440.0.1366.768" timestamp="1576662476853" />
+    <state x="1786" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1576663604092">
+      <screen x="1440" y="0" width="1366" height="768" />
+    </state>
+    <state x="1786" y="89" width="672" height="678" key="search.everywhere.popup/1440.0.1366.768/0.27.1440.873@1440.0.1366.768" timestamp="1576663604092" />
   </component>
 </project>
