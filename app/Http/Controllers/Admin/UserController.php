@@ -18,7 +18,6 @@ class UserController extends Controller
         $this->middleware('auth:api', ['except' => ['register', 'login']]);
     }
 
-
     public function register(UserRequest $request)
     {
         $user = User::create([
@@ -33,28 +32,27 @@ class UserController extends Controller
         ], 200);
     }
 
-    public function login()
+    public function login(Request $request)
     {
-        $credentials = request(['email', 'password']);
-
-
-        if (!$token = auth('api')->attempt($credentials)) {
-            return response()->json(['error' => 'Unauthorized'], 401);
+        $user = User::where('email', $request->email)->first();
+        if (!$user) return response()->json(['error' => 'Email does not exist'], 401);
+        if (Hash::check($request->password, $user->password)) {
+            auth('api')->login($user);
+        } else {
+            return response()->json(['error' => 'Password is incorrect'], 401);
         }
-
+        $token = JWTAuth::fromUser(auth('api')->user());
         return $this->respondWithToken($token);
     }
-
 
     public function me()
     {
         return response()->json(auth('api')->user());
     }
 
-
     public function logout()
     {
-        auth()->logout();
+        auth('api')->logout();
 
         return response()->json(['message' => 'Successfully logged out']);
     }
