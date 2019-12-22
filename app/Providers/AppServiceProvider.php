@@ -2,6 +2,10 @@
 
 namespace App\Providers;
 
+use App\Repository\impl\MusicRepository;
+use App\Repository\MusicRepositoryInterface;
+use App\Service\impl\MusicService;
+use App\Service\impl\MusicServiceInterface;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -13,7 +17,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->singleton(MusicServiceInterface::class, MusicService::class);
+        $this->app->singleton(MusicRepositoryInterface::class, MusicRepository::class);
     }
 
     /**
