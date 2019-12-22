@@ -35,11 +35,16 @@ class UserController extends Controller
     public function login(Request $request)
     {
         $user = User::where('email', $request->email)->first();
-        if (!$user) return response()->json(['error' => 'Email does not exist'], 401);
+        if (!$user) return response()->json([
+            'errors' => ['email' => 'Email does not existed']
+        ], 401);
         if (Hash::check($request->password, $user->password)) {
             auth('api')->login($user);
         } else {
-            return response()->json(['error' => 'Password is incorrect'], 401);
+            return response()->json(['errors' => [
+                    'password' => 'Password is incorrect']
+                ]
+                , 401);
         }
         $token = JWTAuth::fromUser(auth('api')->user());
         return $this->respondWithToken($token);
