@@ -34,11 +34,11 @@ class UserController extends Controller
 
     public function login(Request $request)
     {
-        $user = User::where('email', $request->email)->first();
+        $user = User::where('email', $request->emailLogin)->first();
         if (!$user) return response()->json([
             'errors' => ['email' => 'Email does not existed']
         ], 401);
-        if (Hash::check($request->password, $user->password)) {
+        if (Hash::check($request->passwordLogin, $user->password)) {
             auth('api')->login($user);
         } else {
             return response()->json(['errors' => [
