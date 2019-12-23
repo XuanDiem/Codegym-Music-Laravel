@@ -36,6 +36,7 @@ class MusicController extends Controller
         $music->avatar = $request->avatar;
         $music->musicUrl = $request->musicUrl;
         return $music->save();
+
     }
 
     public function update(Request $request, $id)
