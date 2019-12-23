@@ -9,47 +9,32 @@ use Illuminate\Http\Request;
 
 class MusicController extends Controller
 {
-//    public $musicService;
-//
-//    public function __construct(MusicService $musicService)
-//    {
-//        $this->musicService = $musicService;
-//    }
+    public $musicService;
+
+    public function __construct(MusicService $musicService)
+    {
+        $this->musicService = $musicService;
+    }
 
     public function getMusics()
     {
-// return $this->musicService->getMusics();
-        $musics = Music::all();
-        return $musics;
-
+        $music = $this->musicService->getMusics();
+        return response()->json([
+            'data'=> $music], 200);
     }
+
 
     public function create(Request $request)
     {
-//        $this->musicService->create($request);
-//        return response()->json(['message' => 'You Created A Song Success !']);
-        $music = new Music();
-        $music->id = $request->id;
-        $music->name = $request->name;
-        $music->singer = $request->singer;
-        $music->description = $request->description;
-        $music->avatar = $request->avatar;
-        $music->musicUrl = $request->musicUrl;
-        return $music->save();
+        $this->musicService->create($request);
+        return response()->json(['message' => 'You Created A Song Success !']);
     }
 
     public function update(Request $request, $id)
     {
-//        $this->musicService->update($request, $id);
-//        return response()->json(['message' => 'You Edited A Song Success !']);
-        $music = Music::find($id);
-        $music->id = $request->id;
-        $music->name = $request->name;
-        $music->singer = $request->singer;
-        $music->description = $request->description;
-        $music->avatar = $request->avatar;
-        $music->musicUrl = $request->musicUrl;
-        return $music->save();
+        $this->musicService->update($request, $id);
+        return response()->json(['message' => 'You Edited A Song Success !']);
+
     }
 
     public function delete($id)
