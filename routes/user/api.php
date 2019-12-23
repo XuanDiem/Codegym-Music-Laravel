@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +18,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/test-user', 'SubRouteController@testUser');
+Route::get('musics', 'MusicController@getMusics');
+Route::post('music/create', 'MusicController@create');
+Route::put('music/edit/{id}', 'MusicController@update');
+Route::delete('music/delete/{id}', 'MuscicController@delete');

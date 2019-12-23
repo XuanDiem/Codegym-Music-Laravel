@@ -17,6 +17,9 @@
 4.  Run migration to create table in database
 
         php artisan migrate
-5.  Run project
+5.  Run jwt secret
+
+        php artisan jwt:secret
+6.  Run project
 
         php artisan serve
