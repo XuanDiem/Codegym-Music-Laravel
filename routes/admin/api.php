@@ -23,4 +23,5 @@ Route::post('/register', 'UserController@register');
 Route::post('/login', 'UserController@login');
 Route::post('/logout', 'UserController@logout');
 Route::get('/me', 'UserController@me');
+Route::post('/facebook/login', 'FacebookLoginController@getDataUserAngular');
 
