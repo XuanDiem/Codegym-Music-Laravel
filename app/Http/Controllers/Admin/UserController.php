@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\UserRequest;
+use App\Service\UserServiceInterface;
 use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -13,9 +14,16 @@ use JWTAuth;
 class UserController extends Controller
 {
 
-    public function __construct()
+    /**
+     * @var UserServiceInterface
+     */
+    private $userService;
+
+    public function __construct(UserServiceInterface $userService)
     {
         $this->middleware('auth:api', ['except' => ['register', 'login']]);
+
+        $this->userService = $userService;
     }
 
     public function register(UserRequest $request)
@@ -76,4 +84,12 @@ class UserController extends Controller
 
         ]);
     }
+
+//    public function update(Request $request, $id)
+//    {
+//        $this->userService->update($request, $id);
+//        return response()->json(['message' => 'You Created A Song Success !']);
+//
+//    }
+
 }
