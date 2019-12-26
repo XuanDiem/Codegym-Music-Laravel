@@ -3,12 +3,16 @@
 namespace App\Providers;
 
 use App\Repository\impl\MusicRepository;
+use App\Repository\impl\PlaylistRepository;
 use App\Repository\impl\UserRepository;
 use App\Repository\MusicRepositoryInterface;
+use App\Repository\PlaylistRepositoryInterface;
 use App\Repository\UserRepositoryInterface;
 use App\Service\impl\MusicService;
 use App\Service\impl\MusicServiceInterface;
+use App\Service\impl\PlaylistService;
 use App\Service\impl\UserService;
+use App\Service\PlaylistServiceInterface;
 use App\Service\UserServiceInterface;
 use Illuminate\Support\ServiceProvider;
 
@@ -25,6 +29,8 @@ class AppServiceProvider extends ServiceProvider
         $this->app->singleton(MusicRepositoryInterface::class, MusicRepository::class);
         $this->app->singleton(UserRepositoryInterface::class, UserRepository::class);
         $this->app->singleton(UserServiceInterface::class, UserService::class);
+        $this->app->singleton(PlaylistServiceInterface::class, PlaylistService::class);
+        $this->app->singleton(PlaylistRepositoryInterface::class, PlaylistRepository::class);
     }
 
     /**

@@ -27,10 +27,15 @@ class UserService implements UserServiceInterface
     public function update($request, $id)
     {
         $user = $this->userRepository->findById($id);
-        $user->email = $request->newEmail ? $request->newEmail : $user->email; 
-        $user->name = $request->newName ? $request->newName : $user->name; 
-        if ($request->newPassword ) $user->password = Hash::make($request->newPassword);
+        $user->email = $request->newEmail ? $request->newEmail : $user->email;
+        $user->name = $request->newName ? $request->newName : $user->name;
+        if ($request->newPassword) $user->password = Hash::make($request->newPassword);
         $this->userRepository->update($user);
         return $user;
+    }
+
+    public function getUser($id)
+    {
+        return $this->userRepository->findById($id);
     }
 }
