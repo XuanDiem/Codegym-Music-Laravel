@@ -46,4 +46,10 @@ class PlaylistService implements PlaylistServiceInterface
     {
         return $this->playlistRepository->putSongToPlaylist($playlistId, $songId);
     }
+
+    public function getSongsInPlaylist($playlistId)
+    {
+        $playlist = $this->playlistRepository->getPlaylist($playlistId);
+        return $playlist->musics;
+    }
 }

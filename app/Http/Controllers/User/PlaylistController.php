@@ -58,8 +58,25 @@ class PlaylistController extends Controller
         }
         return \response()->json([
             'data' => $playlists,
-            'message' => 'Get play list success'
+            'message' => 'Put song to Playlist'
         ], Response::HTTP_OK);
+    }
+
+    public function getSongInPlaylist($playlistId)
+    {
+        if (!$songs = $this->playlistService->getSongsInPlaylist($playlistId)) {
+            return \response()->json([
+                'message' => [
+                    'errors' => 'Error! Maybe id not exist'
+                ]
+            ], Response::HTTP_INTERNAL_SERVER_ERROR);
+        }
+
+        return \response()->json([
+            'data' => $songs,
+            'message' => 'Get songs success'
+        ], Response::HTTP_OK);
+
     }
     //
 }

@@ -27,4 +27,9 @@ class PlaylistRepository implements PlaylistRepositoryInterface
             'music_id' => $songId,
         ]);
     }
+
+    public function getPlaylist($playlistId)
+    {
+        return Playlist::findOrFail($playlistId);
+    }
 }

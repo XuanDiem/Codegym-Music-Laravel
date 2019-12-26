@@ -12,4 +12,6 @@ interface PlaylistServiceInterface
 
     public function putSongToPlaylist($playlistId, $songId);
 
+    public function getSongsInPlaylist($playlistId);
+
 }
