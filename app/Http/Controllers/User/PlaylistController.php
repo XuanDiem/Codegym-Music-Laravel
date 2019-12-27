@@ -76,6 +76,22 @@ class PlaylistController extends Controller
             'data' => $songs,
             'message' => 'Get songs success'
         ], Response::HTTP_OK);
+    }
+
+    public function updatePlaylist(Request $request, $playlistId)
+    {
+        if (!$playlist = $this->playlistService->update($request, $playlistId)) {
+            return \response()->json([
+                'message' => [
+                    'errors' => 'Error! Maybe id or data invalid'
+                ]
+            ], Response::HTTP_INTERNAL_SERVER_ERROR);
+        }
+
+        return \response()->json([
+            'data' => $playlist,
+            'message' => 'update success'
+        ], Response::HTTP_OK);
 
     }
     //

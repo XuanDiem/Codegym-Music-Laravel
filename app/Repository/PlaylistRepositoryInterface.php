@@ -12,4 +12,6 @@ interface PlaylistRepositoryInterface
     public function getPlaylist($playlistId);
 
     public function putSongToPlaylist($playlistId, $songId);
+
+    public function update($playlist);
 }

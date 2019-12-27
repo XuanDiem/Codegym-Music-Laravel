@@ -32,4 +32,9 @@ class PlaylistRepository implements PlaylistRepositoryInterface
     {
         return Playlist::findOrFail($playlistId);
     }
+
+    public function update($playlist)
+    {
+        return $playlist->save();
+    }
 }

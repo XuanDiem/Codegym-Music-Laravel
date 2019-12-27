@@ -29,3 +29,4 @@ Route::post('playlist/create', 'PlaylistController@create')->name('playlistCreat
 Route::get('playlists/{userId}', 'PlaylistController@getUserPlaylists')->name('getPlaylists');
 Route::post('playlist/song', 'PlaylistController@putSongToPlaylist')->name('putSongToPlaylist');
 Route::get('playlist/songs/{playlistID}', 'PlaylistController@getSongInPlaylist')->name('getSongInPlaylist');
+Route::post('playlist/update/{playlistID}', 'PlaylistController@updatePlaylist')->name('updatePlaylist');

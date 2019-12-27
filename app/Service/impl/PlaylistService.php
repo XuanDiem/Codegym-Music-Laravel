@@ -52,4 +52,12 @@ class PlaylistService implements PlaylistServiceInterface
         $playlist = $this->playlistRepository->getPlaylist($playlistId);
         return $playlist->musics;
     }
+
+    public function update($request, $playlistId)
+    {
+        $playlist = $this->playlistRepository->getPlaylist($playlistId);
+        $playlist->namePlaylist = $request->newNamePlaylist ? $request->newNamePlaylist : $playlist->namePlaylist;
+        $this->playlistRepository->update($playlist);
+        return $playlist;
+    }
 }

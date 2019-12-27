@@ -14,4 +14,6 @@ interface PlaylistServiceInterface
 
     public function getSongsInPlaylist($playlistId);
 
+    public function update($request, $playlistId);
+
 }
