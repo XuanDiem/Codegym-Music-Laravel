@@ -17,7 +17,7 @@ class User extends Authenticatable implements JWTSubject
      * @var array
      */
     protected $fillable = [
-        'id','name', 'email', 'password',
+        'id', 'name', 'email', 'password',
     ];
 
     /**
@@ -48,4 +48,8 @@ class User extends Authenticatable implements JWTSubject
         return [];
     }
 
+    public function playlists()
+    {
+        return $this->hasMany(Playlist::class);
+    }
 }

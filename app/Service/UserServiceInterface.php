@@ -7,4 +7,6 @@ namespace App\Service;
 interface UserServiceInterface
 {
     public function update($request, $id);
+
+    public function getUser($id);
 }

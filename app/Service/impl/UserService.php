@@ -34,4 +34,9 @@ class UserService implements UserServiceInterface
         $this->userRepository->update($user);
         return $user;
     }
+
+    public function getUser($id)
+    {
+        return $this->userRepository->findById($id);
+    }
 }
