@@ -18,10 +18,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/test-user', 'SubRouteController@testUser');
+
 Route::get('musics', 'MusicController@getMusics');
 Route::post('music/create', 'MusicController@create');
 Route::put('music/edit/{id}', 'MusicController@update');
 Route::delete('music/delete/{id}', 'MuscicController@delete');
+Route::get('song/{userId}/like/{songId}', 'MusicController@likeSong')->name('likeSong');
+Route::get('song/{userId}/disLike/{songId}', 'MusicController@disLikeSong')->name('disLikeSong');
 
 Route::post('update', 'UpdateUserController@updateInfo')->name('updateInfo');
 
@@ -30,3 +33,4 @@ Route::get('playlists/{userId}', 'PlaylistController@getUserPlaylists')->name('g
 Route::post('playlist/song', 'PlaylistController@putSongToPlaylist')->name('putSongToPlaylist');
 Route::get('playlist/songs/{playlistID}', 'PlaylistController@getSongInPlaylist')->name('getSongInPlaylist');
 Route::post('playlist/update/{playlistID}', 'PlaylistController@updatePlaylist')->name('updatePlaylist');
+

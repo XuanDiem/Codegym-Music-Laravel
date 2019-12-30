@@ -52,4 +52,9 @@ class User extends Authenticatable implements JWTSubject
     {
         return $this->hasMany(Playlist::class);
     }
+
+    public function songsHasLike()
+    {
+        return $this->belongsToMany(Music::class,'user_song');
+    }
 }

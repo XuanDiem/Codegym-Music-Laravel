@@ -10,5 +10,10 @@ class Music extends Model
     {
         return $this->belongsToMany(Playlist::class, 'playlist_music');
     }
+
+    public function usersWhoLike()
+    {
+        return $this->belongsToMany(User::class,'user_song');
+    }
     //
 }

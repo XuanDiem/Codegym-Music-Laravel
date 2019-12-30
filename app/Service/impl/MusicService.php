@@ -52,4 +52,17 @@ class MusicService implements MusicServiceInterface
         $idMusic = $this->musicRepository->finById($id);
         return $this->musicRepository->delete($idMusic);
     }
+
+    public function likeSong($userId, $songId)
+    {
+        $data = $this->musicRepository->likeSong($userId, $songId);
+        return $data;
+    }
+
+    public function disLikeSong($userId, $songId)
+    {
+        $data = $this->musicRepository->findSongInPivotTable($userId, $songId);
+        $this->musicRepository->disLikeSong($data);
+        return $data;
+    }
 }

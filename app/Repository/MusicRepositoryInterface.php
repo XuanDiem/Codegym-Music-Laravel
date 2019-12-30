@@ -17,4 +17,10 @@ interface MusicRepositoryInterface
     public function update($music);
 
     public function delete($idMusic);
+
+    public function likeSong($userId, $songId);
+
+    public function disLikeSong($data);
+
+    public function findSongInPivotTable($userId, $songId);
 }

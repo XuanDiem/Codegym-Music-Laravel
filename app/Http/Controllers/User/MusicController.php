@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Music;
 use App\Service\impl\MusicService;
 use Illuminate\Http\Request;
+use Symfony\Component\HttpFoundation\Response;
 
 class MusicController extends Controller
 {
@@ -20,15 +21,13 @@ class MusicController extends Controller
     {
         $music = $this->musicService->getMusics();
         return response()->json([
-            'data'=> $music], 200);
+            'data' => $music], 200);
     }
-
 
     public function create(Request $request)
     {
         $this->musicService->create($request);
         return response()->json(['message' => 'You Created A Song Success !']);
-
     }
 
     public function update(Request $request, $id)
@@ -44,4 +43,21 @@ class MusicController extends Controller
         return response()->json(['message' => 'You Deleted A Song Success !']);
     }
 
+    public function likeSong($userId, $songId)
+    {
+        $data = $this->musicService->likeSong($userId, $songId);
+        return response()->json([
+            'data' => $data,
+            'message' => 'Like A Song'
+        ], Response::HTTP_OK);
+    }
+
+    public function disLikeSong($userId, $songId)
+    {
+        $data = $this->musicService->disLikeSong($userId, $songId);
+        return response()->json([
+            'data' => $data,
+            'message' => 'Dis Like A Song'
+        ], Response::HTTP_OK);
+    }
 }

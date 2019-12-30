@@ -12,6 +12,14 @@ class MusicSeeder extends Seeder
      */
     public function run()
     {
+	$song = new Music();
+        $song->name = 'Real Friends';
+        $song->singer = 'Camila Cabello';
+        $song->description = 'this is a verry awesome song';
+        $song->avatar = 'https://firebasestorage.googleapis.com/v0/b/codegym-music-d1055.appspot.com/o/music%2Ftet.jpg?alt=media&token=a2af61a2-2103-4802-b1ad-25b2d6c72f43';
+        $song->musicUrl = "https://firebasestorage.googleapis.com/v0/b/codegym-music-d1055.appspot.com/o/music%2FReal%20Friends%20-%20Camila%20Cabello%20(NhacPro.net).mp3?alt=media&token=3f49ca1d-c709-495a-a7ea-baf7514aa60e";
+        $song->save();
+
         $song = new Music();
         $song->name = 'Tết Là Tết';
         $song->singer = 'A Huy,Ngân Khánh';
