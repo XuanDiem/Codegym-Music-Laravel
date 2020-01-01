@@ -140,7 +140,7 @@ class MusicSeeder extends Seeder
         Anh có công việc mới
         Phụ em lúc khó khăn
         Những ngày tháng rất căng';
-        $song->avatar = 'https://firebasestorage.googleapis.com/v0/b/codegym-music-d1055.appspot.com/o/music%2Fthanh-hung.jpg?alt=media&token=61a6580b-9bcb-4771-baaa-57c99df16d4c';
+        $song->avatar = 'https://firebasestorage.googleapis.com/v0/b/codegym-music-d1055.appspot.com/o/music%2Fbanh-my-khong%20%3F.jpg?alt=media&token=6bc5c7c8-22b6-4d50-9f52-56a4f1b0d5c8';
         $song->musicUrl = 'https://firebasestorage.googleapis.com/v0/b/codegym-music-d1055.appspot.com/o/music%2FThayToiYeuCoAyDinhLongRemix-ThanhHungIdolDJ-6054427.mp3?alt=media&token=c5bdfdce-dbbb-4306-95ab-9006c444d3aa';
         $song->save();
 
