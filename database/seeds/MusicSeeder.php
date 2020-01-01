@@ -13,30 +13,133 @@ class MusicSeeder extends Seeder
     public function run()
     {
         $song = new Music();
-        $song->name = 'Tết Là Tết';
-        $song->singer = 'A Huy,Ngân Khánh';
-        $song->description = 'Tết tết tết là tết là tết Tết vừa đến đây dưới máy hiên nhà 
-        Tết tết tết là tết là tết Tết vừa ghé qua trong nhà dưới phố.  Tết tết tết là tết là tết 
-        Cho người ở xa về đây sum vầy Tết tết tết là tết là tết Con cháu ông bà quây quần bên nhau. 
-         [ĐK:] Cho bầy trẻ thơ cùng khoe áo mới Cho những người lớn lì xì trẻ con
-         Tất cả mọi người hân hoan chúc nhau Chúc nhau một năm an lành yên vui.';
-        $song->avatar = 'https://firebasestorage.googleapis.com/v0/b/codegym-music-d1055.appspot.com/o/music%2Ftet.jpg?alt=media&token=a2af61a2-2103-4802-b1ad-25b2d6c72f43';
-        $song->musicUrl = 'https://firebasestorage.googleapis.com/v0/b/codegym-music-d1055.appspot.com/o/music%2FTetLaTet-AHuyOnBichHa-2933129.mp3?alt=media&token=a5f9296a-1a89-4361-b91b-09a2797f2797';
+        $song->name = 'Khúc Giao Mùa';
+        $song->singer = 'Trung Quân Idol, Bảo Anh';
+        $song->description = 'Cầm tay nhau bước trong...giao thừa Đón xuân, 
+        đang về với tình yêu trái đất này Ta cùng bao người,
+         nhìn nhau ánh mắt hân hoan Với bao niềm yêu thương cuộc đời 
+         ĐK: Bên em bên em anh say trong hạnh phúc Đôi môi em anh ngỡ cánh đào Bên anh bên anh em nghe trong lòng hát 
+         Những giai điệu tình yêu 
+         Ta đi bên nhau đón xuân đang về tới Hồn hòa vào cùng với đất trời Xin nâng ly lên chúc nhau thêm hạnh phúc 
+         Cuộc đời mãi thắm tươi *** 
+         Đêm nay đêm nay ngàn năm sẽ qua Đêm nay ngàn năm mới về Dù hoa kia có phôi phai 
+         Tình còn dài theo năm tháng Đêm nay đêm nay ngàn năm sẽ qua Xuân theo ngàn năm mới về 
+         Dù qua bao tháng năm dài Tình người không phôi phai 
+        (ĐK) Ta đi bên nhau đón xuân đang về tới Hồn hòa vào cùng với đất trời 
+        Xin nâng ly lên chúc';
+        $song->avatar = 'https://firebasestorage.googleapis.com/v0/b/codegym-music-d1055.appspot.com/o/music%2Fkh%C3%BAc-giao-mua.jpg?alt=media&token=507d241d-d55e-4bb1-986a-d5102ac6a044';
+        $song->musicUrl = 'https://firebasestorage.googleapis.com/v0/b/codegym-music-d1055.appspot.com/o/music%2FKhucGiaoMua-TrungQuanIdolBaoAnh-4743530.mp3?alt=media&token=7c7916a5-b961-42ec-ab21-b4a86676158c';
         $song->save();
 
 
         $song = new Music();
-        $song->name = 'Thay Tôi Yêu Cô Ấy';
-        $song->singer = 'Thanh Hưng';
-        $song->description = 'Lyrics: Ngày hôm nay cô ấy chẳng quan tâm gì mấy
-         Chỉ cần 1 người để yêu thương lúc này Ngày hôm nay cô ấy muốn đi để mua 1 bó hoa 
-         Trang trí nơi đẹp nhất trong nhà Cô ấy hay buồn lúc mưa, thích nghe câu ca ngày xưa 
-         Những lúc khi trời đông nhớ vòng tay ấm nồng và ôm cô ấy thật lâu 
-         ĐK: Người ấy vì thương tôi chờ đợi tôi cũng lâu rồi Mà tình yêu cứ xa vời nên cô ấy ngưng đợi 
-         Ngày ấy gần bên tôi 1 giây thôi cũng không rời
-          Nhưng vì lo nghĩ cuộc đời nên mới cách xa thôi Người hãy dần thay tôi gọi cô ấy thức giấc và 
-          Chờ cô ấy trước ngôi nhà đưa cô ấy la cà 
-          Người yêu của tôi ơi hãy tha thứ cho anh Đã yêu em khi chẳng có chi trong cuộc sống!';
+        $song->name = 'Bánh Mỳ Không ?';
+        $song->singer = 'Đạt G, Du Uyên';
+        $song->description = 'Lời bài hát: Bánh Mì KhôngNhạc sĩ: Đạt G, Du Uyên.Khi mà không còn yêu thì
+        Đêm nào ta cũng say vì
+        Không còn ai gọi ta về
+        Mau thật mau, đau thật đau
+
+        Căn nhà ta cùng thuê ở
+        Giờ đây đã có người thuê rồi
+        Người ta nhìn thật hạnh phúc
+        Bọn mình bơ vơ, thời mình ngu ngơ
+
+        Em thì quá bận với những khoản lo
+        Nhiều hôm ở công ty trễ lương
+        Thì tối ăn bánh mì
+        Bánh mì không, không có thịt luôn
+
+        Tay cầm đơn cầu mong
+        Anh có công việc mới
+        Phụ em lúc khó khăn
+        Những ngày tháng rất căng
+
+        Nhớ xưa còn nói nếu lúc mình giàu
+        Hai ta có nhà lầu
+        Và thêm xe hơi có đủ tất cả màu
+        Chiếc xe cùi bắp bể bánh ngoài đường
+
+        Hai ta thấy bình thường
+        Dù mồ hôi tuôn rơi
+        Nhưng có nhau đời thêm vui
+        Nhớ xưa mình thích những món lề đường
+
+        Hủ tiếu gõ và mì gói nước sôi
+        Thêm cái trứng gà
+        Đến nay điều ước cũng đã thành thật
+        Thành phố mỗi lúc càng chật
+
+        Ta mất nhau, dễ gì gặp lại nhau
+        Rối ren như trật tự giao thông đường phố
+        Lạc nhau rồi, thôi đừng cố
+        Đèn xanh, đèn đỏ rồi tới vàng
+
+        Dừng hay là chạy
+        Thì chuyện buồn ta vẫn mang
+        Tiếng rao thân thuộc
+        Của những quán *** xưa
+
+        Mỗi lần nghe thấy
+        Lòng như cắt, như cưa
+        Nhiều tiền anh biết
+        Bọn mình được ấm no
+
+        Mà tiền nhiều như thế
+        Nên tình cảm mình hóa tro
+        Ta sợ mình đói nên lao vào kiếm ăn
+        Rồi trái tim ta lạnh
+
+        Lạnh hơn một phiến băng
+        Ta vẫn chưa rõ
+        Tại sao mình thay đổi
+        Không ăn cùng nhau
+
+        Nhiều công việc nên hay vội
+        Có những bản nhạc
+        Không nên hát cùng nhau
+        Vì khi bài nhạc cất lên
+
+        Thì cả hai người cùng đau
+        Lúc nghèo rất vui
+        Những năm tháng thăng trầm ấy
+        Chứ không phải giống bây giờ
+
+        Anh mặc vest còn em diện váy đâu
+        Em thì quá bận với những khoản lo
+        Nhiều hôm ở công ty trễ lương
+        Thì tối ăn bánh mì
+
+        Bánh mì không, không có thịt luôn
+        Tay cầm đơn cầu mong
+        Anh có công việc mới
+        Phụ em lúc khó khăn
+
+        Những ngày tháng rất căng
+        Nhớ xưa còn nói nếu lúc mình giàu
+        Hai ta có nhà lầu
+        Và thêm xe hơi có đủ tất cả màu
+
+        Chiếc xe cùi bắp bể bánh ngoài đường
+        Hai ta thấy bình thường
+        Dù mồ hôi tuôn rơi
+        Nhưng có nhau đời thêm vui
+
+        Nhớ xưa mình thích những món lề đường
+        Hủ tiếu gõ và mì gói nước sôi
+        Thêm cái trứng gà
+        Đến nay điều ước cũng đã thành thật
+
+        Thành phố mỗi lúc càng trật
+        Ta mất nhau, câu chuyện cười thật đau
+        Em thì quá bận với những khoản lo
+        Nhiều hôm ở công ty trễ lương
+
+        Thì tối ăn bánh mì
+        Tay cầm đơn cầu mong
+        Anh có công việc mới
+        Phụ em lúc khó khăn
+        Những ngày tháng rất căng';
         $song->avatar = 'https://firebasestorage.googleapis.com/v0/b/codegym-music-d1055.appspot.com/o/music%2Fthanh-hung.jpg?alt=media&token=61a6580b-9bcb-4771-baaa-57c99df16d4c';
         $song->musicUrl = 'https://firebasestorage.googleapis.com/v0/b/codegym-music-d1055.appspot.com/o/music%2FThayToiYeuCoAyDinhLongRemix-ThanhHungIdolDJ-6054427.mp3?alt=media&token=c5bdfdce-dbbb-4306-95ab-9006c444d3aa';
         $song->save();
@@ -53,8 +156,8 @@ class MusicSeeder extends Seeder
          Dù biết lúc trước anh mãi si mê Em nỡ tâm hững hờ (quay bước) Chờ cho con tim cay đắng u hoài Em bỗng nói xa rời 
          Anh như con thuyền trôi Lạc vào cuốn xoáy trong đêm xa xôi mịt mù 
         Chờ bão tố êm đềm Và anh quay trở về Tìm dấu vết năm xưa tàn tro';
-        $song->avatar = 'https://firebasestorage.googleapis.com/v0/b/codegym-music-d1055.appspot.com/o/music%2FQuang-Vinh.jpg?alt=media&token=58b87ec8-4e38-407a-a8e7-8788177ca2bf';
-        $song->musicUrl ='https://firebasestorage.googleapis.com/v0/b/codegym-music-d1055.appspot.com/o/music%2FNguoiEmKhongYeu-QuangVinh-2430593.mp3?alt=media&token=0c3c3ff8-ee14-4a40-9a07-e02f1873c4bc';
+        $song->avatar = 'https://firebasestorage.googleapis.com/v0/b/codegym-music-d1055.appspot.com/o/music%2Fbanh-my-khong%20%3F.jpg?alt=media&token=36ac0583-b305-43fb-a633-1b2373277179';
+        $song->musicUrl ='https://firebasestorage.googleapis.com/v0/b/codegym-music-d1055.appspot.com/o/music%2FBanh-Mi-Khong-Htrol-Remix-ft-DatG-x-DuUyen-DatG-x-DuUyen.mp3?alt=media&token=5f830368-e4c2-4801-8b25-0e6804888086';
         $song->save();
 
         $song = new Music();
