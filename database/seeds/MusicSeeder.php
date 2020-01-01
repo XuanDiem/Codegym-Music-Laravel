@@ -141,7 +141,7 @@ class MusicSeeder extends Seeder
         Phụ em lúc khó khăn
         Những ngày tháng rất căng';
         $song->avatar = 'https://firebasestorage.googleapis.com/v0/b/codegym-music-d1055.appspot.com/o/music%2Fbanh-my-khong%20%3F.jpg?alt=media&token=6bc5c7c8-22b6-4d50-9f52-56a4f1b0d5c8';
-        $song->musicUrl = 'https://firebasestorage.googleapis.com/v0/b/codegym-music-d1055.appspot.com/o/music%2FThayToiYeuCoAyDinhLongRemix-ThanhHungIdolDJ-6054427.mp3?alt=media&token=c5bdfdce-dbbb-4306-95ab-9006c444d3aa';
+        $song->musicUrl = 'https://firebasestorage.googleapis.com/v0/b/codegym-music-d1055.appspot.com/o/music%2FBanh-Mi-Khong-Htrol-Remix-ft-DatG-x-DuUyen-DatG-x-DuUyen.mp3?alt=media&token=5f830368-e4c2-4801-8b25-0e6804888086';
         $song->save();
 
         $song = new Music();
@@ -156,8 +156,8 @@ class MusicSeeder extends Seeder
          Dù biết lúc trước anh mãi si mê Em nỡ tâm hững hờ (quay bước) Chờ cho con tim cay đắng u hoài Em bỗng nói xa rời 
          Anh như con thuyền trôi Lạc vào cuốn xoáy trong đêm xa xôi mịt mù 
         Chờ bão tố êm đềm Và anh quay trở về Tìm dấu vết năm xưa tàn tro';
-        $song->avatar = 'https://firebasestorage.googleapis.com/v0/b/codegym-music-d1055.appspot.com/o/music%2Fbanh-my-khong%20%3F.jpg?alt=media&token=36ac0583-b305-43fb-a633-1b2373277179';
-        $song->musicUrl ='https://firebasestorage.googleapis.com/v0/b/codegym-music-d1055.appspot.com/o/music%2FBanh-Mi-Khong-Htrol-Remix-ft-DatG-x-DuUyen-DatG-x-DuUyen.mp3?alt=media&token=5f830368-e4c2-4801-8b25-0e6804888086';
+        $song->avatar = 'https://firebasestorage.googleapis.com/v0/b/codegym-music-d1055.appspot.com/o/music%2FQuang-Vinh.jpg?alt=media&token=56f3d2a3-fe4b-4064-8ea1-6ce1c94323d0';
+        $song->musicUrl ='https://firebasestorage.googleapis.com/v0/b/codegym-music-d1055.appspot.com/o/music%2FNguoiEmKhongYeu-QuangVinh-2430593.mp3?alt=media&token=45d98fbe-d523-4c0f-8140-8ffca3f8f834';
         $song->save();
 
         $song = new Music();
