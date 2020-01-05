@@ -22,6 +22,7 @@ Route::get('musics', 'MusicController@getMusics');
 Route::post('music/create', 'MusicController@create');
 Route::put('music/edit/{id}', 'MusicController@update');
 Route::delete('music/delete/{id}', 'MusicController@delete');
+Route::get('/song/{songId}', 'MusicController@getSong');
 
 Route::post('update', 'UpdateUserController@updateInfo')->name('updateInfo');
 

@@ -23,6 +23,13 @@ class MusicController extends Controller
             'data'=> $music], 200);
     }
 
+    public function getSong($songId)
+    {
+        $music = $this->musicService->getSong($songId);
+        return response()->json([
+            'data' => $music], 200);
+    }
+
 
     public function create(Request $request)
     {
