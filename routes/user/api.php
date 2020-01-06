@@ -23,6 +23,12 @@ Route::post('music/create', 'MusicController@create');
 Route::put('music/edit/{id}', 'MusicController@update');
 Route::delete('music/delete/{id}', 'MusicController@delete');
 
+
+Route::get('singers', 'SingerController@getSingers');
+Route::post('singer/create', 'SingerController@create');
+//Route::put('music/edit/{id}', 'MusicController@update');
+//Route::delete('music/delete/{id}', 'MusicController@delete');
+
 Route::post('update', 'UpdateUserController@updateInfo')->name('updateInfo');
 
 Route::post('playlist/create', 'PlaylistController@create')->name('playlistCreate');
