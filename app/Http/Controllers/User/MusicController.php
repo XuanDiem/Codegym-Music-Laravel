@@ -1,4 +1,4 @@
-<?php /** @noinspection ALL */
+<?php
 
 namespace App\Http\Controllers\User;
 
@@ -35,7 +35,6 @@ class MusicController extends Controller
     {
         $this->musicService->create($request);
         return response()->json(['message' => 'You Created A Song Success !']);
-
     }
 
     public function update(Request $request, $id)
