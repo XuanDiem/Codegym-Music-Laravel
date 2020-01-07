@@ -22,11 +22,13 @@ Route::get('musics', 'MusicController@getMusics');
 Route::post('music/create', 'MusicController@create');
 Route::put('music/edit/{id}', 'MusicController@update');
 Route::delete('music/delete/{id}', 'MusicController@delete');
+Route::get('/song/{songId}', 'MusicController@getSong');
 
 Route::post('update', 'UpdateUserController@updateInfo')->name('updateInfo');
 
 Route::post('playlist/create', 'PlaylistController@create')->name('playlistCreate');
 Route::get('playlists/{userId}', 'PlaylistController@getUserPlaylists')->name('getPlaylists');
 Route::post('playlist/song', 'PlaylistController@putSongToPlaylist')->name('putSongToPlaylist');
+Route::post('playlist/song/remove', 'PlaylistController@removeSongFromPlaylist')->name('removeSongFromPlaylist');
 Route::get('playlist/songs/{playlistID}', 'PlaylistController@getSongInPlaylist')->name('getSongInPlaylist');
 Route::post('playlist/update/{playlistID}', 'PlaylistController@updatePlaylist')->name('updatePlaylist');

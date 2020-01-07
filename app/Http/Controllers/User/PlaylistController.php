@@ -62,6 +62,16 @@ class PlaylistController extends Controller
         ], Response::HTTP_OK);
     }
 
+    public function removeSongFromPlaylist(Request $request)
+    {
+        $playlists = $this->playlistService->removeSongFromPlaylist($request->playlistId, $request->songId);
+
+        return \response()->json([
+            'data' => $playlists,
+            'message' => 'Remove song to Playlist'
+        ], Response::HTTP_OK);
+    }
+
     public function getSongInPlaylist($playlistId)
     {
         if (!$songs = $this->playlistService->getSongsInPlaylist($playlistId)) {
