@@ -16,6 +16,12 @@ class MusicRepository implements MusicRepositoryInterface
         return $musics;
     }
 
+    public function getNewSongs()
+    {
+        $songs = Music::paginate(6);
+        return $songs;
+    }
+
     public function create($music)
     {
         return $music->save();

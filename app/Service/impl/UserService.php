@@ -30,7 +30,7 @@ class UserService implements UserServiceInterface
         $user->email = $request->newEmail ? $request->newEmail : $user->email;
         $user->name = $request->newName ? $request->newName : $user->name;
         $user->image = $request->newImage ? $request->newImage : $user->image;
-        if ($request->newPassword ) $user->password = Hash::make($request->newPassword);
+        if ($request->newPassword) $user->password = Hash::make($request->newPassword);
         $this->userRepository->update($user);
         return $user;
     }
@@ -38,5 +38,23 @@ class UserService implements UserServiceInterface
     public function getUser($id)
     {
         return $this->userRepository->findById($id);
+    }
+
+    public function changePassword($request)
+    {
+        $user = $this->userRepository->findById($request->userId);
+        if ($this->checkOldPassword($request, $user)) {
+            if ($request->newPassword) $user->password = Hash::make($request->newPassword);
+            return $user;
+        }
+        return false;
+    }
+
+    public function checkOldPassword($request, $user)
+    {
+        if (Hash::check($request->password, $user->password)) {
+            return true;
+        }
+        return null;
     }
 }

@@ -17,4 +17,7 @@ interface MusicRepositoryInterface
     public function update($music);
 
     public function delete($idMusic);
+
+    public function getNewSongs();
+
 }
