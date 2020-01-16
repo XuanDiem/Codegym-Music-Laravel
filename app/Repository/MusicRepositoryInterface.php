@@ -20,4 +20,5 @@ interface MusicRepositoryInterface
 
     public function getNewSongs();
 
+    public function getVnSongs();
 }

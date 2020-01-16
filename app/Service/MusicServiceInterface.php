@@ -27,4 +27,6 @@ interface MusicServiceInterface
     public function getSongsUserHasLiked($user);
 
     public function getNewSongs();
+
+    public function getVnSongs();
 }

@@ -24,6 +24,8 @@ Route::put('music/edit/{id}', 'MusicController@update');
 Route::delete('music/delete/{id}', 'MusicController@delete');
 Route::get('/song/{songId}', 'MusicController@getSong');
 Route::get('/new-song', 'MusicController@getNewSongs');
+Route::get('/song-Vn', 'MusicController@getVnSongs');
+Route::get('/song-Us', 'MusicController@getUsSongs');
 
 Route::post('/changePassword', 'ChangePasswordController@changePassword');
 
