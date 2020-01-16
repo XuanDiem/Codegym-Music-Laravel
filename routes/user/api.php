@@ -26,6 +26,7 @@ Route::get('/song/{songId}', 'MusicController@getSong');
 Route::get('/new-song', 'MusicController@getNewSongs');
 Route::get('/song-Vn', 'MusicController@getVnSongs');
 Route::get('/song-Us', 'MusicController@getUsSongs');
+Route::get('/user/songs', 'MusicController@getUserSongs');
 
 Route::post('/changePassword', 'ChangePasswordController@changePassword');
 

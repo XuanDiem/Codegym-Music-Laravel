@@ -29,4 +29,6 @@ interface MusicServiceInterface
     public function getNewSongs();
 
     public function getVnSongs();
+
+    public function getUserSongs($request);
 }
