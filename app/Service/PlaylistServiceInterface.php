@@ -12,6 +12,8 @@ interface PlaylistServiceInterface
 
     public function putSongToPlaylist($playlistId, $songId);
 
+    public function removeSongFromPlaylist($playlistId, $songId);
+
     public function getSongsInPlaylist($playlistId);
 
     public function update($request, $playlistId);

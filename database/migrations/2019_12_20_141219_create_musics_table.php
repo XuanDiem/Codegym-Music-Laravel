@@ -17,9 +17,10 @@ class CreateMusicsTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('singer');
-            $table->longText('description');
+            $table->longText('description')->nullable();
+            $table->longText('category')->nullable();
             $table->string('avatar');
-            $table->string('musicUrl');
+            $table->string('file');
             $table->timestamps();
         });
     }

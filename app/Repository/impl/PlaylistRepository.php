@@ -28,6 +28,14 @@ class PlaylistRepository implements PlaylistRepositoryInterface
         ]);
     }
 
+    public function removeSongFromPlaylist($playlistId, $songId)
+    {
+        return $playlist = DB::table('playlist_music')
+        ->where('playlist_id', $playlistId)
+        ->where('music_id', $songId)
+        ->delete();
+    }
+
     public function getPlaylist($playlistId)
     {
         return Playlist::findOrFail($playlistId);

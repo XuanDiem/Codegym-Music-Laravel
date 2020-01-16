@@ -13,5 +13,7 @@ interface PlaylistRepositoryInterface
 
     public function putSongToPlaylist($playlistId, $songId);
 
+    public function removeSongFromPlaylist($playlistId, $songId);
+
     public function update($playlist);
 }
