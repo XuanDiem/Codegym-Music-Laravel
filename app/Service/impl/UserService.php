@@ -39,4 +39,9 @@ class UserService implements UserServiceInterface
     {
         return $this->userRepository->findById($id);
     }
+
+    public function show_profile()
+    {
+        return $this->userRepository->show_profile();
+    }
 }
