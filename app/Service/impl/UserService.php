@@ -40,6 +40,11 @@ class UserService implements UserServiceInterface
         return $this->userRepository->findById($id);
     }
 
+
+    public function show_profile()
+    {
+        return $this->userRepository->show_profile();
+
     public function changePassword($request)
     {
         $user = $this->userRepository->findById($request->userId);
@@ -56,5 +61,6 @@ class UserService implements UserServiceInterface
             return true;
         }
         return null;
+
     }
 }
