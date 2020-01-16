@@ -44,6 +44,7 @@ class UserService implements UserServiceInterface
     public function show_profile()
     {
         return $this->userRepository->show_profile();
+    }
 
     public function changePassword($request)
     {
