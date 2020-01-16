@@ -18,6 +18,16 @@ class MusicService implements MusicServiceInterface
         $this->musicRepository = $musicRepository;
     }
 
+    public function getVnSongs()
+    {
+       return $this->musicRepository->getVnSongs();
+    }
+
+    public function getUsSongs()
+    {
+       return $this->musicRepository->getUsSongs();
+    }
+
     public function getMusics()
     {
         return $this->musicRepository->getMusics();

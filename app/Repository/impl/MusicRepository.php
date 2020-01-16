@@ -16,6 +16,20 @@ class MusicRepository implements MusicRepositoryInterface
         return $musics;
     }
 
+    public function getVnSongs()
+    {
+        $songs = Music::where('category', 'Vn')->paginate(6);
+
+        return $songs;
+    }
+
+    public function getUsSongs()
+    {
+        $songs = Music::where('category', 'Us')->paginate(6);
+
+        return $songs;
+    }
+
     public function getNewSongs()
     {
         $songs = Music::paginate(6);

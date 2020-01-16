@@ -32,13 +32,27 @@ class MusicController extends Controller
 
     }
 
+    public function getVnSongs()
+    {
+        $songs = $this->musicService->getVnSongs();
+        return response()->json([
+            'data' => $songs], 200);
+
+    }
+    public function getUsSongs()
+    {
+        $songs = $this->musicService->getUsSongs();
+        return response()->json([
+            'data' => $songs], 200);
+
+    }
+
     public function getSong($songId)
     {
         $music = $this->musicService->getSong($songId);
         return response()->json([
             'data' => $music], 200);
     }
-
 
     public function create(Request $request)
     {
