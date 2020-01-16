@@ -31,12 +31,11 @@ class MusicService implements MusicServiceInterface
     public function create(Request $request)
     {
         $music = new Music();
-        $music->id = $request->id;
         $music->name = $request->name;
         $music->singer = $request->singer;
         $music->description = $request->description;
         $music->avatar = $request->avatar;
-        $music->musicUrl = $request->musicUrl;
+        $music->file = $request->file;
         return $this->musicRepository->create($music);
     }
 
@@ -84,5 +83,9 @@ class MusicService implements MusicServiceInterface
         });
     }
 
+    public function getNewSongs()
+    {
+        return $this->musicRepository->getNewSongs();
+    }
 
 }

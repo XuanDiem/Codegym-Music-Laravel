@@ -23,6 +23,14 @@ Route::post('music/create', 'MusicController@create');
 Route::put('music/edit/{id}', 'MusicController@update');
 Route::delete('music/delete/{id}', 'MusicController@delete');
 Route::get('/song/{songId}', 'MusicController@getSong');
+Route::get('/new-song', 'MusicController@getNewSongs');
+
+Route::post('/changePassword', 'ChangePasswordController@changePassword');
+
+Route::get('singers', 'SingerController@getSingers');
+Route::post('singer/create', 'SingerController@create');
+//Route::put('music/edit/{id}', 'MusicController@update');
+//Route::delete('music/delete/{id}', 'MusicController@delete');
 
 Route::post('update', 'UpdateUserController@updateInfo')->name('updateInfo');
 

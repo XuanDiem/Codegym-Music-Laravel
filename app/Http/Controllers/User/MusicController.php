@@ -20,7 +20,16 @@ class MusicController extends Controller
     {
         $music = $this->musicService->getMusics();
         return response()->json([
-            'data'=> $music], 200);
+            'data' => $music], 200);
+    }
+
+    public function getNewSongs()
+    {
+//        $songs = $this->musicService->getNewSongs();
+        $songs = Music::orderBy('created_at', 'desc')->get();
+        return response()->json([
+            'data' => $songs], 200);
+
     }
 
     public function getSong($songId)

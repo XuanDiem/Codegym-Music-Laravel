@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,6 +19,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('/test-admin', 'SubRouteController@testAdmin');
+
 
 Route::post('/register', 'UserController@register');
 Route::post('/login', 'UserController@login');

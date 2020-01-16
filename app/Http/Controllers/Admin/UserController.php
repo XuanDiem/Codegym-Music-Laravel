@@ -10,6 +10,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use JWTAuth;
+use Symfony\Component\HttpFoundation\Response;
 
 class UserController extends Controller
 {
