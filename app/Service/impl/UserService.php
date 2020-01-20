@@ -30,7 +30,6 @@ class UserService implements UserServiceInterface
         $user->email = $request->newEmail ? $request->newEmail : $user->email;
         $user->name = $request->newName ? $request->newName : $user->name;
         $user->image = $request->newImage ? $request->newImage : $user->image;
-        if ($request->newPassword) $user->password = Hash::make($request->newPassword);
         $this->userRepository->update($user);
         return $user;
     }

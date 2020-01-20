@@ -35,7 +35,7 @@ Route::post('singer/create', 'SingerController@create');
 //Route::put('music/edit/{id}', 'MusicController@update');
 //Route::delete('music/delete/{id}', 'MusicController@delete');
 
-Route::get('comments/{userId}/{musicId}', 'CommentController@index');
+Route::get('comments/{musicId}', 'CommentController@getSongsComments');
 Route::post('comment/create', 'CommentController@create');
 
 Route::post('update', 'UpdateUserController@updateInfo')->name('updateInfo');

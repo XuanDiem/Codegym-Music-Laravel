@@ -70,8 +70,10 @@ class MusicController extends Controller
 
     public function update(Request $request, $id)
     {
-        $this->musicService->update($request, $id);
-        return response()->json(['message' => 'You Edited A Song Success !']);
+        $song = $this->musicService->update($request, $id);
+        return response()->json([
+            'data' => $song,
+            'message' => 'Song has been edit Success !']);
 
     }
 

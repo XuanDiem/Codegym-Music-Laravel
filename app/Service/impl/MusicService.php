@@ -72,11 +72,12 @@ class MusicService implements MusicServiceInterface
     function update(Request $request, $id)
     {
         $music = $this->musicRepository->finById($id);
-        $music->name = $request->name;
-        $music->singer = $request->singer;
-        $music->description = $request->description;
-        $music->avatar = $request->avatar;
+        $music->name = $request->newName ? $request->newName : $music->name;
+        $music->singer = $request->singer ? $request->singer : $music->singer;
+        $music->description = $request->description ? $request->description : $music->description;
+        $music->avatar = $request->newImage ? $request->newImage : $music->avatar;
         $this->musicRepository->update($music);
+        return $music;
     }
 
     public
