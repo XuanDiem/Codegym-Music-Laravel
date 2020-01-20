@@ -21,4 +21,10 @@ interface MusicRepositoryInterface
     public function getNewSongs();
 
     public function getVnSongs();
+
+    public function likeSong($userId, $songId);
+
+    public function disLikeSong($data);
+
+    public function findSongInPivotTable($userId, $songId);
 }

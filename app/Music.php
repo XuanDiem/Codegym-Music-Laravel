@@ -20,4 +20,9 @@ class Music extends Model
     {
         return $this->hasMany(Comment::class)->with('user');
     }
+
+    public function usersWhoLike()
+    {
+        return $this->belongsToMany(User::class, 'user_song');
+    }
 }
