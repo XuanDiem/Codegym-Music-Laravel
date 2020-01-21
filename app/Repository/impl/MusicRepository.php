@@ -59,10 +59,27 @@ class MusicRepository implements MusicRepositoryInterface
 
     public function likeSong($userId, $songId)
     {
-        return $data = DB::table('user_song')->insert([
+        if ($this->checkDataExist($userId, $songId)) {
+            return;
+        }
+        return $this->insertToDatabase($userId, $songId);
+    }
+
+    public function checkDataExist($userId, $songId)
+    {
+        $data = DB::table('user_song')->where('user_id', $userId)->Where('music_id', $songId)
+            ->first();
+        return $data;
+    }
+
+    public function insertToDatabase($userId, $songId)
+    {
+        if (DB::table('user_song')->insert([
             'user_id' => $userId,
             'music_id' => $songId,
-        ]);
+        ])) {
+            return ['songId' => $songId];
+        }
     }
 
     public function disLikeSong($data)

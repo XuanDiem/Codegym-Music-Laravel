@@ -90,8 +90,7 @@ class MusicService implements MusicServiceInterface
 
     public function likeSong($userId, $songId)
     {
-        $data = $this->musicRepository->likeSong($userId, $songId);
-        return $data;
+        return $this->musicRepository->likeSong($userId, $songId);
     }
 
 
