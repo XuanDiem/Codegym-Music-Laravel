@@ -15,6 +15,7 @@ class CreateMusicsTable extends Migration
     {
         Schema::create('musics', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('user_id')->nullable();
             $table->string('name');
             $table->string('singer');
             $table->longText('description')->nullable();

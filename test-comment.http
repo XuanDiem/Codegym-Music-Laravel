@@ -1,0 +1,14 @@
+GET http://localhost:8000/api/comments/1/2
+Accept: application/json
+
+###
+POST http://localhost:8000/api/comment/create
+Content-Type: application/json
+
+{
+    "comment":"ahiiii",
+    "user_id": "1",
+    "music_id": "2"
+}
+
+###

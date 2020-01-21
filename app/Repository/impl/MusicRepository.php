@@ -7,6 +7,7 @@ namespace App\Repository\impl;
 use App\Music;
 use App\Repository\MusicRepositoryInterface;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class MusicRepository implements MusicRepositoryInterface
 {
@@ -54,5 +55,43 @@ class MusicRepository implements MusicRepositoryInterface
     public function delete($idMusic)
     {
         return $idMusic->delete();
+    }
+
+    public function likeSong($userId, $songId)
+    {
+        if ($this->checkDataExist($userId, $songId)) {
+            return;
+        }
+        return $this->insertToDatabase($userId, $songId);
+    }
+
+    public function checkDataExist($userId, $songId)
+    {
+        $data = DB::table('user_song')->where('user_id', $userId)->Where('music_id', $songId)
+            ->first();
+        return $data;
+    }
+
+    public function insertToDatabase($userId, $songId)
+    {
+        if (DB::table('user_song')->insert([
+            'user_id' => $userId,
+            'music_id' => $songId,
+        ])) {
+            return ['songId' => $songId];
+        }
+    }
+
+    public function disLikeSong($data)
+    {
+        return DB::table('user_song')->delete($data->id);
+    }
+
+    public function findSongInPivotTable($userId, $songId)
+    {
+        $data = DB::table('user_song')
+            ->where('user_id', $userId)
+            ->where('music_id', $songId)->first();
+        return $data;
     }
 }

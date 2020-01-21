@@ -61,14 +61,6 @@ class MusicSeeder extends Seeder
         $song->save();
 
         $song = new Music();
-        $song->name = 'You Are Not Alone';
-        $song->singer = 'Michael Jackson';
-        $song->avatar = 'https://firebasestorage.googleapis.com/v0/b/codegym-music-d1055.appspot.com/o/music%2FMichael-Jackson.jpeg?alt=media&token=d5210948-e043-4642-95cd-ef04e1a84ccc';
-        $song->file = 'https://firebasestorage.googleapis.com/v0/b/codegym-music-d1055.appspot.com/o/music%2FYouAreNotAlone-MichaelJackson_b9xm.mp3?alt=media&token=1cc6e9b0-d8cd-4aea-a2c0-a504ebe6c87f';
-        $song->category = 'US';
-        $song->save();
-
-        $song = new Music();
         $song->name = 'Khúc Giao Mùa';
         $song->singer = 'Trung Quân Idol, Bảo Anh';
         $song->category = 'VN';
