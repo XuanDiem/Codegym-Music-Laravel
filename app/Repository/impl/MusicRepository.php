@@ -19,14 +19,14 @@ class MusicRepository implements MusicRepositoryInterface
 
     public function getVnSongs()
     {
-        $songs = Music::where('category', 'Vn')->paginate(6);
+        $songs = Music::with('singers')->where('category', 'Vn')->paginate(6);
 
         return $songs;
     }
 
     public function getUsSongs()
     {
-        $songs = Music::where('category', 'Us')->paginate(6);
+        $songs = Music::with('singers')->where('category', 'Us')->paginate(6);
 
         return $songs;
     }
@@ -40,6 +40,14 @@ class MusicRepository implements MusicRepositoryInterface
     public function create($music)
     {
         return $music->save();
+    }
+
+    public function createSingers($music, $value)
+    {
+        DB::table('singer_song')->insert([
+            'music_id' => $music->id,
+            'singer_id' => $value
+        ]);
     }
 
     public function finById($id)

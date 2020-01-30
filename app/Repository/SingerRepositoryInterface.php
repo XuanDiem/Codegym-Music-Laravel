@@ -6,6 +6,8 @@ namespace App\Repository;
 
 interface SingerRepositoryInterface
 {
+    public function getSinger($singerId);
+
     public function getSingers();
 
     public function create($singer);

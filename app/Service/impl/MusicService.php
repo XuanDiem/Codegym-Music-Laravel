@@ -5,6 +5,7 @@ namespace App\Service\impl;
 
 use App\Music;
 use App\Repository\impl\MusicRepository;
+use App\Service\SingerServiceInterface;
 use App\Service\UserServiceInterface;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -17,12 +18,18 @@ class MusicService implements MusicServiceInterface
      * @var UserServiceInterface
      */
     private $userService;
+    /**
+     * @var SingerServiceInterface
+     */
+    private $singerService;
 
-    public function __construct(UserServiceInterface $userService
-        , MusicRepository $musicRepository)
+    public function __construct(UserServiceInterface $userService,
+                                SingerServiceInterface $singerService,
+                                MusicRepository $musicRepository)
     {
         $this->musicRepository = $musicRepository;
         $this->userService = $userService;
+        $this->singerService = $singerService;
     }
 
     public function getUserSongs($request)
@@ -39,6 +46,12 @@ class MusicService implements MusicServiceInterface
     public function getUsSongs()
     {
         return $this->musicRepository->getUsSongs();
+    }
+
+    public function getSingerSongs($singerId)
+    {
+        $singer = $this->singerService->getSinger($singerId);
+        return $singer->songs;
     }
 
     public function getMusics()
@@ -60,7 +73,15 @@ class MusicService implements MusicServiceInterface
         $music->description = $request->description;
         $music->avatar = $request->avatar;
         $music->file = $request->file;
-        return $this->musicRepository->create($music);
+        $this->musicRepository->create($music);
+        $this->createSingers($music, $request);
+    }
+
+    public function createSingers($music, $request)
+    {
+        foreach ($request->singers as $value){
+            $this->musicRepository->createSingers($music, $value);
+        }
     }
 
     public function isUserUpload($request)

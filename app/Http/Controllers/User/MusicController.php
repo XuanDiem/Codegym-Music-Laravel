@@ -39,6 +39,14 @@ class MusicController extends Controller
             'data' => $songs], 200);
     }
 
+    public function getSingerSongs($singerId)
+    {
+        $song = $this->musicService->getSingerSongs($singerId);
+        return \response()->json([
+            'data' => $song
+        ], 200);
+    }
+
     public function getNewSongs()
     {
 //        $songs = $this->musicService->getNewSongs();
@@ -74,7 +82,8 @@ class MusicController extends Controller
     public function create(Request $request)
     {
         $this->musicService->create($request);
-        return response()->json(['message' => 'You Created A Song Success !']);
+        return response()->json(['message' => 'Success !',
+            'data' => $request]);
     }
 
     public function update(Request $request, $id)

@@ -18,6 +18,7 @@ interface MusicServiceInterface
 
     public function getSong($id);
 
+    public function getSingerSongs($singerId);
     public function likeSong($userId, $songId);
 
     public function disLikeSong($userId, $songId);

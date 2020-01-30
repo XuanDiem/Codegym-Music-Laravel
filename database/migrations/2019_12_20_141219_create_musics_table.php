@@ -17,7 +17,7 @@ class CreateMusicsTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id')->nullable();
             $table->string('name');
-            $table->string('singer');
+            $table->string('singer')->nullable();
             $table->longText('description')->nullable();
             $table->longText('category')->nullable();
             $table->string('avatar');
