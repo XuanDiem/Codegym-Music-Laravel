@@ -14,56 +14,56 @@ class MusicSeeder extends Seeder
     {
         $song = new Music();
         $song->name = 'Real Friends';
-        $song->singer = 'Camila Cabello';
         $song->avatar = 'https://firebasestorage.googleapis.com/v0/b/codegym-music-d1055.appspot.com/o/music%2Fdownload.jpeg?alt=media&token=8c6ceb71-e7db-4298-959e-1be8808e8df5';
         $song->file = 'https://firebasestorage.googleapis.com/v0/b/codegym-music-d1055.appspot.com/o/music%2FReal%20Friends%20-%20Camila%20Cabello%20(NhacPro.net).mp3?alt=media&token=1cd9d90b-f3fc-4f3e-8b41-ef8921828d78';
         $song->category = 'US';
+        $song->views = 100;
         $song->save();
 
         $song = new Music();
         $song->name = 'Barbie-Girl';
-        $song->singer = 'Aqua';
         $song->avatar = 'https://firebasestorage.googleapis.com/v0/b/codegym-music-d1055.appspot.com/o/music%2FAqua.png?alt=media&token=c86e491d-0d48-4351-b70f-d5da4e2d8b69';
         $song->file = 'https://firebasestorage.googleapis.com/v0/b/codegym-music-d1055.appspot.com/o/music%2FBarbie-Girl-Aqua.mp3?alt=media&token=67f1cde4-b37b-47ef-9f6f-cea68fb2dc6e';
         $song->category = 'US';
+        $song->views = 200;
         $song->save();
 
         $song = new Music();
         $song->name = 'Everytime We Touch';
-        $song->singer = 'Cascada';
         $song->avatar = 'https://firebasestorage.googleapis.com/v0/b/codegym-music-d1055.appspot.com/o/music%2FCascada.jpg?alt=media&token=db5c4384-3df5-4a2a-8ce8-20dc52fa8b35';
         $song->file = 'https://firebasestorage.googleapis.com/v0/b/codegym-music-d1055.appspot.com/o/music%2FEverytimeWeTouch-Cascada.mp3?alt=media&token=bd304ae6-2664-4935-a864-7a423ecb2478';
         $song->category = 'US';
+        $song->views = 300;
         $song->save();
 
         $song = new Music();
         $song->name = 'My Heart Will Go On';
-        $song->singer = 'Celine';
         $song->avatar = 'https://firebasestorage.googleapis.com/v0/b/codegym-music-d1055.appspot.com/o/music%2FCeline-Dion.jpeg?alt=media&token=f6aed899-2aec-4b93-95a7-16403465ad46';
         $song->file = 'https://firebasestorage.googleapis.com/v0/b/codegym-music-d1055.appspot.com/o/music%2FMy%20Heart%20Will%20Go%20On%20-%20Celine%20Dion.mp3?alt=media&token=5189f88d-932d-4f2d-b594-0b281d81680b';
         $song->category = 'US';
+        $song->views = 400;
         $song->save();
 
         $song = new Music();
         $song->name = 'Trouble Is a Friend';
-        $song->singer = 'Friend Lenka';
         $song->avatar = 'https://firebasestorage.googleapis.com/v0/b/codegym-music-d1055.appspot.com/o/music%2Flenka.png?alt=media&token=e0fd1b58-7360-4fd3-970c-c9388439ecc1';
         $song->file = 'https://firebasestorage.googleapis.com/v0/b/codegym-music-d1055.appspot.com/o/music%2FTrouble-Is-a-Friend-Lenka.mp3?alt=media&token=f46ac664-36ff-45cb-9fed-98436aea595d';
         $song->category = 'US';
+        $song->views = 500;
         $song->save();
 
         $song = new Music();
         $song->name = 'Waiting For Love';
-        $song->singer = 'Friend Martin Garrix Avicii John Legend';
         $song->avatar = 'https://firebasestorage.googleapis.com/v0/b/codegym-music-d1055.appspot.com/o/music%2FAvicii.jpeg?alt=media&token=d6dbcc7a-0e66-4abc-8baf-daa7eda9215c';
         $song->file = 'https://firebasestorage.googleapis.com/v0/b/codegym-music-d1055.appspot.com/o/music%2FWaitingForLove-MartinGarrixAviciiJohnLegend-3852978.mp3?alt=media&token=f0ce8115-a216-47bb-b37e-fd96db9155f8';
         $song->category = 'US';
+        $song->views = 600;
         $song->save();
 
         $song = new Music();
         $song->name = 'Khúc Giao Mùa';
-        $song->singer = 'Trung Quân Idol, Bảo Anh';
         $song->category = 'VN';
+        $song->views = 700;
         $song->description = 'Cầm tay nhau bước trong...giao thừa Đón xuân,
         đang về với tình yêu trái đất này Ta cùng bao người,
          nhìn nhau ánh mắt hân hoan Với bao niềm yêu thương cuộc đời
@@ -83,8 +83,8 @@ class MusicSeeder extends Seeder
 
         $song = new Music();
         $song->name = 'Bánh Mỳ Không ?';
-        $song->singer = 'Đạt G, Du Uyên';
         $song->category = 'VN';
+        $song->views = 800;
         $song->description = 'Lời bài hát: Bánh Mì KhôngNhạc sĩ: Đạt G, Du Uyên.Khi mà không còn yêu thì
         Đêm nào ta cũng say vì
         Không còn ai gọi ta về
@@ -196,8 +196,8 @@ class MusicSeeder extends Seeder
 
         $song = new Music();
         $song->name = 'Người Em Không Yêu';
-        $song->singer = 'Quang Vinh';
         $song->category = 'VN';
+        $song->views = 900;
         $song->description = 'Nơi con sông cô liêu ngày xưa Một giấc mơ tan theo mây bay từ đây Khi xưa ta yêu nhau
         đắm say Rồi vỡ tan trôi theo dòng sông lãng quên Từng chiều đàn bồ câu tung cánh Khát khao bay hát ca với
         đôi tình nhân Màu ánh nắng mơ hồ chôn vùi đi
@@ -213,8 +213,8 @@ class MusicSeeder extends Seeder
 
         $song = new Music();
         $song->name = 'Hết Thương Cạn Nhớ';
-        $song->singer = 'Đức Phúc';
         $song->category = 'VN';
+        $song->views = 1000;
         $song->description = 'LYRICS: Em àh anh đã biết Là tình yêu này chẳng cần thiết Em cần nơi bình yên Chứ không phải anh kế bên Em đừng giữ lại anh Khi trái tim vụn vỡ chưa lành Điều ban nãy anh vừa thấy là gì đây ?!
          Em đã vừa ghì hôn ai cận kề bên tai tựa đầu lên vai Thấy em đang đắm say chắc em chẳng hay đôi mình chưa chia tay Đôi khi tình yêu sẽ hoá nhạt nhoà khi vô tình một trong hai Cuốn lấy sai trái đến khi vỡ lỡ cả hai huỷ hoại tương lai
           Chẳng cần một ai nữa , bất kể ai cũng dư thừa Một mình đứng khóc giữa mưa , nén cơn đau vào từng hơi thở Một người mình chẳng ngưng nhớ Nhưng lại quay bước giả vờ Bảo rằng mình cũng như em ...
@@ -225,8 +225,8 @@ class MusicSeeder extends Seeder
 
         $song = new Music();
         $song->name = 'Cô Thắm Không Về !';
-        $song->singer = 'Phát Hồ, Jokes Bii, Thiện';
         $song->category = 'VN';
+        $song->views = 1100;
         $song->description = 'Từng là hơi ấm bên đời giờ là cơn gió ngang trời
          Mọi người xung quanh thay nhau cho tôi biết Cô Thắm không về nữa đâu Đặt trọn niềm tin sai người
           Giờ này ai khóc ai cười Thề hẹn làm chi Để rồi bỏ đi Tôi cố đem tình vun đắp mây hoá ngang trời che lấp Tôi vẫn nơi này đợi chờ cô về với tôi Là vì tôi quá ngốc nghếch Hay là do gia cảnh tôi nghèo Gốc đa chỉ còn mình tôi ngồi nhìn trăng lên Bao nhiêu kí ức một thời Giờ thành cay đắng một đời

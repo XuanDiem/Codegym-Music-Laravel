@@ -35,6 +35,7 @@ class SingerService implements SingerServiceInterface
     {
         $singer = new Singer();
         $singer->name = $request->singerName;
+        $singer->user_id = auth('api')->user()->id;
         $singer->avatar = $request->singerAvatar;
         $singer->description = $request->singerDes;
         $singer->singerGender = $request->singerGender;

@@ -10,7 +10,6 @@ interface UserServiceInterface
 
     public function getUser($id);
 
-
     public function show_profile();
 
     public function changePassword($request);

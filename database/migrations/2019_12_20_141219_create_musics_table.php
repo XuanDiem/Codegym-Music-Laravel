@@ -17,11 +17,11 @@ class CreateMusicsTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id')->nullable();
             $table->string('name');
-            $table->string('singer')->nullable();
             $table->longText('description')->nullable();
-            $table->longText('category')->nullable();
-            $table->string('avatar');
-            $table->string('file');
+            $table->longText('category');
+            $table->string('avatar')->nullable();
+            $table->string('file')->nullable();
+            $table->integer('views')->default(0);
             $table->timestamps();
         });
     }

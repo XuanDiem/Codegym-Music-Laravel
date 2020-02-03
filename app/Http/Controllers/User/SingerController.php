@@ -16,7 +16,6 @@ class SingerController extends Controller
 
     public function __construct(SingerService $singerService)
     {
-
         $this->singerService = $singerService;
     }
 

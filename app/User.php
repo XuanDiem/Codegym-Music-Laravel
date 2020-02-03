@@ -70,6 +70,6 @@ class User extends Authenticatable implements JWTSubject
 
     public function singer()
     {
-        return $this->hasOne(Singer::class);
+        return $this->hasOne(Singer::class)->with('songs');
     }
 }

@@ -47,9 +47,10 @@ class UserService implements UserServiceInterface
 
     public function changePassword($request)
     {
-        $user = $this->userRepository->findById($request->userId);
+        $user = auth('api')->user();
         if ($this->checkOldPassword($request, $user)) {
-            if ($request->newPassword) $user->password = Hash::make($request->newPassword);
+            $user->password = Hash::make($request->newPassword);
+            $user->save();
             return $user;
         }
         return false;

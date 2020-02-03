@@ -136,5 +136,14 @@ class SingerSeeder extends Seeder
         $singer->singerGender = 'FeMale';
         $singer->singerNickName = 'singerNickName';
         $singer->save();
+
+        $singer = new \App\Singer();
+        $singer->user_id = 1;
+        $singer->name = 'Admin';
+        $singer->avatar = '';
+        $singer->description = 'description';
+        $singer->singerGender = 'Male';
+        $singer->singerNickName = 'singerNickName';
+        $singer->save();
     }
 }

@@ -71,5 +71,9 @@ class SingerSongSeeder extends Seeder
             'singer_id' => 12,
             'music_id' => 11
         ]);
+        \Illuminate\Support\Facades\DB::table('singer_song')->insert([
+            'singer_id' => 15,
+            'music_id' => 11
+        ]);
     }
 }

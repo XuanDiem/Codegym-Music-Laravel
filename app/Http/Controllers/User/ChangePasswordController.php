@@ -22,16 +22,13 @@ class ChangePasswordController extends Controller
 
     public function changePassword(Request $request)
     {
-//        return response()->json([
-//            'message' => 'Change Password Success'
-//        ], Response::HTTP_OK);
-
         if (!$user = $this->userService->changePassword($request)) {
             return response()->json([
                 'message' => 'May be Password is incorrect'
             ], Response::HTTP_INTERNAL_SERVER_ERROR);
         }
         return response()->json([
+            'data' => $user,
             'message' => 'Change Password Success'
         ], Response::HTTP_OK);
     }
