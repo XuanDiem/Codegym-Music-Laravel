@@ -39,6 +39,10 @@ class UserService implements UserServiceInterface
         return $this->userRepository->findById($id);
     }
 
+    public function getSingerOfUser()
+    {
+        return auth('api')->user()->singer;
+    }
 
     public function show_profile()
     {
@@ -53,7 +57,7 @@ class UserService implements UserServiceInterface
             $user->save();
             return $user;
         }
-        return false;
+        return $user;
     }
 
     public function checkOldPassword($request, $user)

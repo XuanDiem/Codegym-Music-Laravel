@@ -29,7 +29,7 @@ class ChangePasswordController extends Controller
         }
         return response()->json([
             'data' => $user,
-            'message' => 'Change Password Success'
+            'message' => 'Change Password Success, Please Login again'
         ], Response::HTTP_OK);
     }
 }

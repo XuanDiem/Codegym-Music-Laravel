@@ -38,6 +38,7 @@ Route::get('favorite/songs', 'MusicController@getFavoriteSongs')->name('getFavor
 Route::post('/changePassword', 'ChangePasswordController@changePassword');
 
 Route::get('singers', 'SingerController@getSingers');
+Route::get('user-singer', 'SingerController@getSingerOfUser');
 Route::post('singer/create', 'SingerController@create')->middleware('auth:api');
 //Route::put('music/edit/{id}', 'MusicController@update');
 //Route::delete('music/delete/{id}', 'MusicController@delete');
