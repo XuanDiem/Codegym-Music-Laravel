@@ -16,6 +16,10 @@ class PlaylistSeeder extends Seeder
         $playlist->namePlaylist = 'playlistName2';
         $playlist->save();
         $playlist = new \App\Playlist();
+        $playlist->user_id = 2;
+        $playlist->namePlaylist = 'Camila Cabello';
+        $playlist->save();
+        $playlist = new \App\Playlist();
         $playlist->user_id = 3;
         $playlist->namePlaylist = 'playlistName3';
         $playlist->save();

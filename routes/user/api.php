@@ -50,6 +50,9 @@ Route::post('update', 'UpdateUserController@updateInfo')->name('updateInfo');
 
 Route::post('playlist/create', 'PlaylistController@create')->name('playlistCreate');
 Route::get('playlists/{userId}', 'PlaylistController@getUserPlaylists')->name('getPlaylists');
+Route::get('playlist/liked', 'PlaylistController@getPlaylistsUserHasLiked')->name('getPlaylistsUserHasLiked');
+Route::get('playlist/like/{playlistId}', 'PlaylistController@likePlaylist')->name('likePlaylist');
+Route::get('playlist/disLike/{playlistId}', 'PlaylistController@disLikePlaylist')->name('disLikePlaylist');
 Route::post('playlist/song', 'PlaylistController@putSongToPlaylist')->name('putSongToPlaylist');
 Route::post('playlist/song/remove', 'PlaylistController@removeSongFromPlaylist')->name('removeSongFromPlaylist');
 Route::get('playlist/songs/{playlistID}', 'PlaylistController@getSongInPlaylist')->name('getSongInPlaylist');

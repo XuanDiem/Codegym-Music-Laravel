@@ -172,7 +172,7 @@ class MusicService implements MusicServiceInterface
     public
     function getSongsUserHasLiked($user)
     {
-        return $user->songsHasLike->map(function ($song) {
+        return $user->songsHasLiked->map(function ($song) {
             return $song->id;
         });
     }
