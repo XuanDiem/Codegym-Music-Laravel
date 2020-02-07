@@ -14,9 +14,15 @@ interface MusicServiceInterface
 
     public function update(Request $request, $id);
 
+    public function getTopViewsSong();
+
+    public function getFavoriteSongs();
+
     public function delete($id);
 
     public function getSong($id);
+
+    public function getSingerSongs($singerId);
 
     public function likeSong($userId, $songId);
 

@@ -26,12 +26,20 @@ class SingerService implements SingerServiceInterface
         return $this->singerRepository->getSingers();
     }
 
+    public function getSinger($singerId)
+    {
+        return $this->singerRepository->getSinger($singerId);
+    }
+
     public function create(Request $request)
     {
         $singer = new Singer();
-        $singer->name = $request->name;
-        $singer->avatar = $request->avatar;
-        $singer->description = $request->description;
+        $singer->name = $request->singerName;
+        $singer->user_id = auth('api')->user()->id;
+        $singer->avatar = $request->singerAvatar;
+        $singer->description = $request->singerDes;
+        $singer->singerGender = $request->singerGender;
+        $singer->singerNickName = $request->singerNickName;
         return $this->singerRepository->create($singer);
     }
 

@@ -3,6 +3,7 @@
 
 namespace App\Service\impl;
 
+use App\Playlist;
 use App\Repository\PlaylistRepositoryInterface;
 use App\Service\PlaylistServiceInterface;
 use App\Service\UserServiceInterface;
@@ -33,7 +34,11 @@ class PlaylistService implements PlaylistServiceInterface
 
     public function create($request)
     {
-        return $this->playlistRepository->create($request);
+        $playlist = new Playlist();
+        $playlist->namePlaylist = $request->namePlaylist;
+        $playlist->user_id = $request->user_id;
+        $playlist->save();
+        return $playlist;
     }
 
     public function getUserPlaylist($userId)
@@ -65,4 +70,25 @@ class PlaylistService implements PlaylistServiceInterface
         $this->playlistRepository->update($playlist);
         return $playlist;
     }
+
+    public
+    function getPlaylistsUserHasLiked($user)
+    {
+        return $user->playlistsHasLiked->map(function ($playlist) {
+            return $playlist->id;
+        });
+    }
+
+    public function likePlaylist($playlistId)
+    {
+        return $this->playlistRepository->likePlaylist($playlistId);
+    }
+
+    public function disLikePlaylist($playlistId)
+    {
+        $data = $this->playlistRepository->findSongInPivotTable(auth('api')->user()->id, $playlistId);
+        $this->playlistRepository->disLikePlaylist($data);
+        return $data;
+    }
+
 }

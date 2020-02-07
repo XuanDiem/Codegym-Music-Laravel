@@ -104,5 +104,30 @@ class PlaylistController extends Controller
         ], Response::HTTP_OK);
 
     }
+
+    public function getPlaylistsUserHasLiked()
+    {
+        $playlist = $this->playlistService->getPlaylistsUserHasLiked(auth('api')->user());
+        return response()->json([
+            'data' => $playlist], 200);
+    }
+
+    public function likePlaylist($playlistId)
+    {
+        $data = $this->playlistService->likePlaylist($playlistId);
+        return response()->json([
+            'data' => $data,
+            'message' => 'Like A Playlist'
+        ], Response::HTTP_OK);
+    }
+
+    public function disLikePlaylist($playlistId)
+    {
+        $data = $this->playlistService->disLikePlaylist($playlistId);
+        return response()->json([
+            'data' => $data,
+            'message' => 'Dislike A Playlist'
+        ], Response::HTTP_OK);
+    }
     //
 }

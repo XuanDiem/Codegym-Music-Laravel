@@ -22,6 +22,16 @@ interface MusicRepositoryInterface
 
     public function getVnSongs();
 
+    public function getTopViewsSong();
+
+    public function getFavoriteSongs();
+
+
+    public function createSingers($music, $value);
+
+    public function
+    deleteOldSingers($id);
+
     public function likeSong($userId, $songId);
 
     public function disLikeSong($data);

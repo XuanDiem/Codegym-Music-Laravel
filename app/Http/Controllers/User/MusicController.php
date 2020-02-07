@@ -7,6 +7,8 @@ use App\Music;
 use App\Service\impl\MusicService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
+use PhpParser\Node\Expr\Array_;
 use Symfony\Component\HttpFoundation\Response;
 
 class MusicController extends Controller
@@ -25,6 +27,21 @@ class MusicController extends Controller
             'data' => $songs], 200);
     }
 
+    public function getFavoriteSongs()
+    {
+        $songs = $this->musicService->getFavoriteSongs();
+
+        return response()->json([
+            'data' => $songs], 200);
+    }
+
+    public function getTopViewsSong()
+    {
+        $songs = $this->musicService->getTopViewsSong();
+        return response()->json([
+            'data' => $songs], 200);
+    }
+
     public function getMusics()
     {
         $music = $this->musicService->getMusics();
@@ -39,10 +56,18 @@ class MusicController extends Controller
             'data' => $songs], 200);
     }
 
+    public function getSingerSongs($singerId)
+    {
+        $song = $this->musicService->getSingerSongs($singerId);
+        return \response()->json([
+            'data' => $song
+        ], 200);
+    }
+
     public function getNewSongs()
     {
-//        $songs = $this->musicService->getNewSongs();
-        $songs = Music::orderBy('created_at', 'desc')->get();
+        $songs = $this->musicService->getNewSongs();
+//        $songs = Music::orderBy('created_at', 'desc')->get();
         return response()->json([
             'data' => $songs], 200);
 
@@ -74,12 +99,13 @@ class MusicController extends Controller
     public function create(Request $request)
     {
         $this->musicService->create($request);
-        return response()->json(['message' => 'You Created A Song Success !']);
+        return response()->json(['message' => 'Success !',
+            'data' => $request]);
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        $song = $this->musicService->update($request, $id);
+        $song = $this->musicService->update($request, $request->songId);
         return response()->json([
             'data' => $song,
             'message' => 'Song has been edit Success !']);

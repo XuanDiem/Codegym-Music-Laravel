@@ -8,8 +8,9 @@ interface UserServiceInterface
 {
     public function update($request, $id);
 
-    public function getUser($id);
+    public function getSingerOfUser();
 
+    public function getUser($id);
 
     public function show_profile();
 
